@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .parallax_container {
+            width: 100%;
+            height: 100vh;
+            perspective: 8px;
+            perspective-origin: 50%;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            position: relative;
+        }
+
+        .image {
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            transform: 0 50%;
+        }
+
+        .image_background {
+            width: 1600px;
+            height: 2000px;
+            transform: translateZ(0px) scale(1);
+            transform-origin: 0 50%;
+        }
+
+        .image_middle {
+            height: 100%;
+            width: 100%;
+            transform: translateZ(5px) scale(0.375);
+            transform-origin: 50%;
+        }
+
+        .image_middle2 {
+            height: 100%;
+            width: 100%;
+            transform: translateZ(4px) scale(0.475);
+            transform-origin: 50%;
+        }
+
+        .image_foreground {
+            transform: translateZ(2px) scale(0.75);
+            transform-origin: top;
+            
+        }
+
+        .card {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            position: absolute;
+            transform: rotate(-20px);
+            background-image: url("./img/burbujas.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card2 {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            position: absolute;
+            transform: rotate(-30px);
+            background-image: url("./img/burbujas.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+   
+
+        .two {
+            right: 36%;
+            top: 350px;
+           
+        }
+
+        .three {
+            left: 58%;
+            bottom: -500px;
+  
+        }
+
+        .four {
+            left: 10%;
+            bottom: -900px;
+  
+        }
+
+        .five {
+            right: 30%;
+            bottom: -300px;
+        }
+
+
+        .uno {
+            left: 16%;
+            top: 350px;
+           
+        }
+
+        .dos {
+            right: 48%;
+            bottom: -500px;
+  
+        }
+
+        .tres {
+            right: 10%;
+            bottom: -900px;
+  
+        }
+
+        .cuatro {
+            left: 40%;
+            bottom: -1000px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="parallax_container">
+        <div class="image image_background">
+            <img src="./img/paisaje.jpg" alt="">
+        </div>
+
+        <div class="image image_middle">
+            <div class="card two"></div>
+            <div class="card three"></div>
+            <div class="card four"></div>
+            <div class="card five"></div>
+        </div>
+
+     
+        <div class="image image_foreground">
+                <div class="card2 uno"></div>
+                <div class="card2 dos"></div>
+                <div class="card2 tres"></div>
+                <div class="card2 cuatro"></div>
+        </div>
+    </div>
+</body>
+
+</html>

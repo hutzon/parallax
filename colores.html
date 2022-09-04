@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .parallax_container {
+            background-color: #D9AFD9;
+            background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+
+            width: 100%;
+            height: 100vh;
+            perspective: 8px;
+            perspective-origin: 50%;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            position: relative;
+        }
+
+        .image {
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            transform: 0 50%;
+        }
+
+        .image_background {
+            width: 1600px;
+            height: 2000px;
+            transform: translateZ(0px) scale(1);
+            transform-origin: 0 50%;
+        }
+
+        .image_middle {
+            height: 100%;
+            width: 100%;
+            transform: translateZ(5px) scale(0.375);
+            transform-origin: 50%;
+        }
+
+        .image_foreground {
+            transform: translateZ(2px) scale(0.75);
+            transform-origin: top;
+
+        }
+
+        .barra {
+            width: 100%;
+            height: 100px;
+            position: absolute;
+            transform: rotate(-20px);
+            background-color: #FFFFFF;
+            background-image: linear-gradient(180deg, #FFFFFF 0%, #6284FF 50%, #FF0000 100%);
+
+        }
+
+        .uno {
+          
+            margin-top: 200px;
+        }
+
+        .dos {
+            margin-top: 400px;
+        }
+
+        .tres {
+            margin-top: 600px;
+        }
+
+        .cuatro {
+            margin-top: 800px;
+        }
+
+        .cinco {
+            margin-top: 1000px;
+        }
+
+
+        .cuadro {
+            width: 100px;
+            height: 100px;
+            border-radius: 20% 20% 0 0;
+            position: absolute;
+            transform: rotate(-20px);
+            background-color: #52ACFF;
+            background-image: linear-gradient(180deg, #52ACFF 25%, #FFE32C 100%);
+
+        }
+
+        .seis {
+            right: 16%;
+            margin-top: 210px;
+        }
+
+        .siete {
+            right: 45%;
+            margin-top: 330px;
+        }
+
+        .ocho {
+            right: 80%;
+            margin-top: 250px;
+        }
+
+        .nueve {
+            right: 70%;
+            margin-top: 800px;
+        }
+
+        .diez {
+            right: 35%;
+            margin-top: 700px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parallax_container">
+        <div class="image image_background">
+
+        </div>
+
+        <div class="image image_middle">
+
+            <div class="barra uno"></div>
+            <div class="barra dos"></div>
+            <div class="barra tres"></div>
+            <div class="barra cuatra"></div>
+            <div class="barra cinco"></div>
+        </div>
+
+        <div class="image image_foreground">
+            <div class="cuadro seis"></div>
+            <div class="cuadro siete"></div>
+            <div class="cuadro ocho"></div>
+            <div class="cuadro nueve"></div>
+            <div class="cuadro diez"></div>
+        </div>
+    </div>
+</body>
+
+</html>
